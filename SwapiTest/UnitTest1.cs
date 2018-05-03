@@ -10,20 +10,18 @@ namespace SwapiTest
     public class UnitTest1
     {
         IWebDriver driver;
-
+        Application app;
 
         [TestInitialize]
         public void TestInit()
         {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://swapi.co/");
+            app.Start("https://swapi.co/");
         }
 
         [TestCleanup]
         public void TestCleanup()
         {
-            driver.Close();
-            driver.Dispose();
+            app.Close();
         }
 
         [TestMethod]
