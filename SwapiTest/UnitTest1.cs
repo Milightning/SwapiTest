@@ -10,11 +10,12 @@ namespace SwapiTest
     public class UnitTest1
     {
         IWebDriver driver;
-        Application app;
+        Application app = new Application();
 
         [TestInitialize]
         public void TestInit()
         {
+            
             app.Start("https://swapi.co/");
         }
 
@@ -27,7 +28,7 @@ namespace SwapiTest
         [TestMethod]
         public void TestMethod1()
         {
-            IWebElement textField = driver.FindElement(By.Id("interactive"));
+            
             var starShipsSearchSearch = "starships";
             textField.Clear();
             textField.SendKeys(starShipsSearchSearch);
