@@ -7,6 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 
 namespace SwapiTest
@@ -34,7 +35,12 @@ namespace SwapiTest
         {
             RequestButton.Click();
         }
-
-
+        
+        public SpaceShip GetData()
+        {
+            string json = JsonConvert.DeserializeObject(ResultBox.Text());
+            return this;
+        }
+       
     }
 }

@@ -30,8 +30,7 @@ namespace SwapiTest
         {
             
             var starShipsSearchSearch = "starships";
-            textField.Clear();
-            textField.SendKeys(starShipsSearchSearch);
+            
               
 
         }
