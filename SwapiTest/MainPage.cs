@@ -38,8 +38,8 @@ namespace SwapiTest
         
         public SpaceShip GetData()
         {
-            string json = JsonConvert.DeserializeObject(ResultBox.Text());
-            return this;
+            SpaceShip output = JsonConvert.DeserializeObject<SpaceShip>(ResultBox.Text);
+            return output;
         }
        
     }
