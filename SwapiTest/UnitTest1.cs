@@ -29,8 +29,9 @@ namespace SwapiTest
         public void TestMethod1()
         {
             
-            var starShipsSearchSearch = "starships";
-            
+            string starShipsSearch = "starships";
+
+            string spaceShip = app.MainPage.SearchItem(starShipsSearch)
               
 
         }

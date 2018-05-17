@@ -26,13 +26,9 @@ namespace SwapiTest
         public IWebElement RequestButton => driver.FindElement(By.XPath("//span[@class='input-group-btn']/button[@class='btn btn-primary']"));
         public IWebElement ResultBox => driver.FindElement(By.Id("interactive_output"));
 
-        public void SetSearchItem(string searchItem)
+        public void SearchItem(string searchItem)
         {
             TextField.SendKeys(searchItem);
-        }
-
-        public void Search()
-        {
             RequestButton.Click();
         }
         

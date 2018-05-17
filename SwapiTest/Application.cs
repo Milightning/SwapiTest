@@ -18,7 +18,7 @@ namespace SwapiTest
             driver.Navigate().GoToUrl(url);
             return this;
         }
-
+        public MainPage MainPage => new MainPage(driver);
         public void Close()
         {
             driver.Quit();
